@@ -1,0 +1,11 @@
+.program risetime
+    set pindirs, 0
+    mov x, ~null
+loop:
+    jmp pin done
+    jmp x-- loop
+done:
+    mov isr, x
+    push block
+finish:
+    jmp finish
